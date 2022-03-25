@@ -11,7 +11,7 @@
     	http://www.springframework.org/schema/mvc
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <context:component-scan base-package="main.webapp.org.firstSpringMVC"/>
+    <context:component-scan base-package="org.firstSpringMVC"/>
 
     <mvc:annotation-driven/>
 

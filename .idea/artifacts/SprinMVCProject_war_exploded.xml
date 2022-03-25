@@ -1,6 +1,13 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="SprinMVCProject:war exploded">
-    <output-path>$PROJECT_DIR$/out/artifacts/SprinMVCProject_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target/SprinMVCProject</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>SprinMVCProject</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -21,6 +28,9 @@
           <element id="library" level="project" name="Maven: org.unbescape:unbescape:1.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.32" />
         </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/SprinMVCProject/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="SprinMVCProject/web/Web" />
     </root>
