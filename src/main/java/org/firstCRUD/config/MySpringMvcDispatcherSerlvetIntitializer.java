@@ -1,8 +1,11 @@
-package org.firstSpringMVC.config;
+package org.firstCRUD.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class SpringMVCDispatcher extends AbstractAnnotationConfigDispatcherServletInitializer {
+/**
+ * @author Olga Mitlenskya
+ */
+public class MySpringMvcDispatcherSerlvetIntitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
     @Override
     protected Class<?>[] getRootConfigClasses() {
         return null;
