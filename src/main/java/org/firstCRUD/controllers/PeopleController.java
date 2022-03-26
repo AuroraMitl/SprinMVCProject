@@ -1,15 +1,14 @@
 package org.firstCRUD.controllers;
 
 import org.firstCRUD.DAO.PersonDAO;
+import org.firstCRUD.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 
-    @Controller
+@Controller
     @RequestMapping("/people")
     public class PeopleController{
 
@@ -34,6 +33,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
         model.addAttribute("person", personDAO.show(id));
         return "people/show";
     }
+//        //do it in a simple way
+//        @GetMapping("/new")
+//        public String newPerson(Model model){
+//            model.addAttribute("person", new Person());
+//            return "people/new";
+//        }
+
+    //do it in a simple way
+    @GetMapping("/new")
+       public String newPerson(@ModelAttribute("person") Person person){
+           return "people/new";
+       }
+
+        @PostMapping()
+        public String create(@ModelAttribute("person") Person person){
+            personDAO.save(person);
+            return "redirect:/people";
+        }
+
     }
 
 
